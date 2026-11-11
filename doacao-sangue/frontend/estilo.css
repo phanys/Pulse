@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  color: #b3122b;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select {
+  padding: 8px;
+  font-size: 15px;
+}
+
+.linha {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  background: #b3122b;
+  color: white;
+  cursor: pointer;
+}
+
+button.cinza {
+  background: #666;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.erro {
+  color: #b3122b;
+}
+
+.sucesso {
+  color: #1a7f37;
+}

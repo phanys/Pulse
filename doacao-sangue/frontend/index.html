@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doação de Sangue</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <h1>Voluntários para doação de sangue</h1>
+
+  <form id="formulario">
+    <input type="hidden" id="id">
+    <input id="nome" placeholder="Nome" required>
+    <input id="email" type="email" placeholder="E-mail" required>
+    <input id="carteirinha" placeholder="Carteirinha (opcional)">
+    <select id="tipoSanguineo" required>
+      <option value="">Tipo sanguíneo</option>
+      <option>A+</option>
+      <option>A-</option>
+      <option>B+</option>
+      <option>B-</option>
+      <option>AB+</option>
+      <option>AB-</option>
+      <option>O+</option>
+      <option>O-</option>
+    </select>
+    <div class="linha">
+      <label><input type="checkbox" id="disponivel" checked> Disponível para doar</label>
+      <button type="submit" id="botaoSalvar">Cadastrar</button>
+      <button type="button" id="botaoCancelar" class="cinza" hidden>Cancelar</button>
+    </div>
+  </form>
+
+  <p id="mensagem"></p>
+
+  <label>Filtrar por tipo:
+    <select id="filtro">
+      <option value="">Todos</option>
+      <option>A+</option>
+      <option>A-</option>
+      <option>B+</option>
+      <option>B-</option>
+      <option>AB+</option>
+      <option>AB-</option>
+      <option>O+</option>
+      <option>O-</option>
+    </select>
+  </label>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Tipo</th>
+        <th>Disponível</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="lista"></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
